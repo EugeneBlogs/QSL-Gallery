@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>QSL-галерея Валерия Васильева (UA2FS)</title>
+</head>
+
+<body>
+    <header>
+        <div class="contaner">
+            <div class="row center-align grey lighten-4">
+                <div class="col l3 m12 s12">
+                    <h1>QSL-галерея</h3>
+                </div>
+                <div class="col l5 m6 s12" style="padding-top: 35px;">
+                    <div class="sort">
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter="all">Все</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter="none">&#10007;</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-1">1</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-2">2</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-3">3</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-4">4</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-5">5</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-6">6</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-7">7</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-8">8</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-9">9</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-0">0</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-a">A</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-b">B</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-c">C</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-d">D</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-e">E</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-f">F</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-g">G</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-h">H</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-i">I</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-j">J</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-k">K</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-l">L</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-m">M</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-n">N</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-o">O</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-p">P</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-q">Q</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-r">R</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-s">S</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-t">T</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-u">U</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-v">V</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-w">W</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-x">X</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-y">Y</button>
+                        <button class="btn-floating btn-small waves-effect waves-light red" type="button"
+                            data-filter=".category-z">Z</button>
+                        <br>
+                        <button class="btn-floating btn-small waves-effect waves-red green" type="button"
+                            data-sort="default:desc">&#8593;</button>
+                        <button class="btn-floating btn-small waves-effect waves-red green" type="button"
+                            data-sort="default:asc">&#8595;</button>
+                        <button class="btn-floating btn-small waves-effect waves-red green" type="button"
+                            data-sort="default:random">🔀</button>
+                        <button class="btn-floating btn-small waves-effect waves-purple yellow black-text" type="button"
+                            onclick="Count()">№?</button>
+                    </div>
+                </div>
+                <div class="col l4 m6 s12" style="padding-top: 35px;">
+                    <div class="input-field ui-widget col s12">
+                        <i class="material-icons prefix">search</i>
+                        <input type="text" class="autocomplete" id="user_request" placeholder="Введите позывной">
+                        <label for="user_request">Поиск по фото</label>
+                        <button class="waves-effect waves-yellow btn-small blue" onclick="Search()">Искать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row all-cards">
+                <div class="col s3 mix category-1">
+                    <img class="materialboxed" width="100%" src="img/1a0c.png" alt="1a0c" id="1a0c">
+                </div>
+                <div class="col s3 mix category-1">
+                    <img class="materialboxed" width="100%" src="img/1s1rr.png" alt="1s1rr" id="1s1rr">
+                </div>
+                <div class="col s3 mix category-3">
+                    <img class="materialboxed" width="100%" src="img/3c1l.png" alt="3c1l" id="3c1l">
+                </div>
+                <div class="col s3 mix category-3">
+                    <img class="materialboxed" width="100%" src="img/3d2cp.png" alt="3d2cp" id="3d2cp">
+                </div>
+                <div class="col s3 mix category-3">
+                    <img class="materialboxed" width="100%" src="img/3da0rr.png" alt="3da0rr" id="3da0rr">
+                </div>
+                <div class="col s3 mix category-3">
+                    <img class="materialboxed" width="100%" src="img/3y0pi.png" alt="3y0pi" id="3y0pi">
+                </div>
+                <div class="col s3 mix category-3">
+                    <img class="materialboxed" width="100%" src="img/3y0z.png" alt="3y0z" id="3y0z">
+                </div>
+                <div class="col s3 mix category-4">
+                    <img class="materialboxed" width="100%" src="img/4b4b.png" alt="4b4b" id="4b4b">
+                </div>
+                <div class="col s3 mix category-4">
+                    <img class="materialboxed" width="100%" src="img/4s7kkg.jpg" alt="4s7kkg" id="4s7kkg">
+                </div>
+                <div class="col s3 mix category-4">
+                    <img class="materialboxed" width="100%" src="img/4u1un.png" alt="4u1un" id="4u1un">
+                </div>
+                <div class="col s3 mix category-4">
+                    <img class="materialboxed" width="100%" src="img/4w-k7c0.png" alt="4w-k7c0" id="4w-k7c0">
+                </div>
+                <div class="col s3 mix category-5">
+                    <img class="materialboxed" width="100%" src="img/5v7ei.png" alt="5v7ei" id="5v7ei">
+                </div>
+                <div class="col s3 mix category-5">
+                    <img class="materialboxed" width="100%" src="img/5w0ky.png" alt="5w0ky" id="5w0ky">
+                </div>
+                <div class="col s3 mix category-5">
+                    <img class="materialboxed" width="100%" src="img/5w0rs.jpg" alt="5w0rs" id="5w0rs">
+                </div>
+                <div class="col s3 mix category-6">
+                    <img class="materialboxed" width="100%" src="img/6o1oo.png" alt="6o1oo" id="6o1oo">
+                </div>
+                <div class="col s3 mix category-7">
+                    <img class="materialboxed" width="100%" src="img/7o1ygf.png" alt="7o1ygf" id="7o1ygf">
+                </div>
+                <div class="col s3 mix category-7">
+                    <img class="materialboxed" width="100%" src="img/7q6m.png" alt="7q6m" id="7q6m">
+                </div>
+                <div class="col s3 mix category-8">
+                    <img class="materialboxed" width="100%" src="img/8b3ftdm.png" alt="8b3ftdm" id="8b3ftdm">
+                </div>
+                <div class="col s3 mix category-8">
+                    <img class="materialboxed" width="100%" src="img/8p1a.jpg" alt="8p1a" id="8p1a">
+                </div>
+                <div class="col s3 mix category-9">
+                    <img class="materialboxed" width="100%" src="img/9l1jt.png" alt="9l1jt" id="9l1jt">
+                </div>
+                <div class="col s3 mix category-a">
+                    <img class="materialboxed" width="100%" src="img/a61as.png" alt="a61as" id="a61as">
+                </div>
+                <div class="col s3 mix category-a">
+                    <img class="materialboxed" width="100%" src="img/a71am.png" alt="a71am" id="a71am">
+                </div>
+                <div class="col s3 mix category-a">
+                    <img class="materialboxed" width="100%" src="img/a71em.png" alt="a71em" id="a71em">
+                </div>
+                <div class="col s3 mix category-a">
+                    <img class="materialboxed" width="100%" src="img/a92hk.png" alt="a92hk" id="a92hk">
+                </div>
+                <div class="col s3 mix category-a">
+                    <img class="materialboxed" width="100%" src="img/ah3d.jpg" alt="ah3d" id="ah3d">
+                </div>
+                <div class="col s3 mix category-b">
+                    <img class="materialboxed" width="100%" src="img/bp0p.png" alt="bp0p" id="bp0p">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/c21sx.png" alt="c21sx" id="c21sx">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/c6aqq.png" alt="c6aqq" id="c6aqq">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/c7a.png" alt="c7a" id="c7a">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cb0z.png" alt="cb0z" id="cb0z">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/ce0aa.png" alt="ce0aa" id="ce0aa">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/ce0y.png" alt="ce0y" id="ce0y">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/ce5pr.png" alt="ce5pr" id="ce5pr">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cp1xrm.png" alt="cp1xrm" id="cp1xrm">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cp6cl.png" alt="cp6cl" id="cp6cl">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cx1fu.png" alt="cx1fu" id="cx1fu">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cy9c.png" alt="cy9c" id="cy9c">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/cyo-va1axc.png" alt="cyo-va1axc" id="cyo-va1axc">
+                </div>
+                <div class="col s3 mix category-d">
+                    <img class="materialboxed" width="100%" src="img/d2eb.png" alt="d2eb" id="d2eb">
+                </div>
+                <div class="col s3 mix category-d">
+                    <img class="materialboxed" width="100%" src="img/d4b.png" alt="d4b" id="d4b">
+                </div>
+                <div class="col s3 mix category-c">
+                    <img class="materialboxed" width="100%" src="img/dp1pol.png" alt="dp1pol" id="dp1pol">
+                </div>
+                <div class="col s3 mix category-d">
+                    <img class="materialboxed" width="100%" src="img/dt8a.png" alt="dt8a" id="dt8a">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/e31a.png" alt="e31a" id="e31a">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/e51dwc.png" alt="e51dwc" id="e51dwc">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/e51gc.png" alt="e51gc" id="e51gc">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/e6gg.png" alt="e6gg" id="e6gg">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/el2el-4.png" alt="el2el-4" id="el2el-4">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/er1aao.png" alt="er1aao" id="er1aao">
+                </div>
+                <div class="col s3 mix category-e">
+                    <img class="materialboxed" width="100%" src="img/ey7af.jpg" alt="ey7af" id="ey7af">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fh4vvk.png" alt="fh4vvk" id="fh4vvk">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fj-nn2dx.png" alt="fj-nn2dx" id="fj-nn2dx">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fo-df1yp.png" alt="fo-df1yp" id="fo-df1yp">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fo-sp5eaq.jpg" alt="fo-sp5eaq" id="fo-sp5eaq">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fo0aaa.jpg" alt="fo0aaa" id="fo0aaa">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fo5qs.png" alt="fo5qs" id="fo5qs">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fp-kv1j.png" alt="fp-kv1j" id="fp-kv1j">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fr-f8fua.png" alt="fr-f8fua" id="fr-f8fua">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fr4ta.png" alt="fr4ta" id="fr4ta">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft4ja.png" alt="ft4ja" id="ft4ja">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft4ta.png" alt="ft4ta" id="ft4ta">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft4xu.png" alt="ft4xu" id="ft4xu">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft5ga.jpg" alt="ft5ga" id="ft5ga">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft5wq.png" alt="ft5wq" id="ft5wq">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/ft5zm.png" alt="ft5zm" id="ft5zm">
+                </div>
+                <div class="col s3 mix category-f">
+                    <img class="materialboxed" width="100%" src="img/fw1jg.png" alt="fw1jg" id="fw1jg">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/h40kj.png" alt="h40kj" id="h40kj">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/h44gc.png" alt="h44gc" id="h44gc">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/hc5dx.png" alt="hc5dx" id="hc5dx">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/hh2aa.png" alt="hh2aa" id="hh2aa">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/hk0gu.png" alt="hk0gu" id="hk0gu">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/hk0tu.png" alt="hk0tu" id="hk0tu">
+                </div>
+                <div class="col s3 mix category-h">
+                    <img class="materialboxed" width="100%" src="img/hq5x.png" alt="hq5x" id="hq5x">
+                </div>
+                <div class="col s3 mix category-j">
+                    <img class="materialboxed" width="100%" src="img/j6-ai6ly.png" alt="ai6ly" id="j6-ai6ly">
+                </div>
+                <div class="col s3 mix category-j">
+                    <img class="materialboxed" width="100%" src="img/jd1bly.png" alt="jd1bly" id="jd1bly">
+                </div>
+                <div class="col s3 mix category-j">
+                    <img class="materialboxed" width="100%" src="img/jd1bna.png" alt="jd1bna" id="jd1bna">
+                </div>
+                <div class="col s3 mix category-j">
+                    <img class="materialboxed" width="100%" src="img/jg8nqj-jd1.png" alt="jg8nqj-jd1" id="jg8nqj-jd1">
+                </div>
+                <div class="col s3 mix category-j">
+                    <img class="materialboxed" width="100%" src="img/jt2dx.png" alt="jt2dx" id="jt2dx">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/k1n.png" alt="k1n" id="k1n">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/k4m.jpg" alt="k4m" id="k4m">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/k5d.png" alt="k5d" id="k5d">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/k5p.png" alt="k5p" id="k5p">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/kg4wv.png" alt="kg4wv" id="kg4wv">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/kh5k.png" alt="kh5k" id="kh5k">
+                </div>
+                <div class="col s3 mix category-k">
+                    <img class="materialboxed" width="100%" src="img/kh8-w5mj.png" alt="kh8-w5mj" id="kh8-w5mj">
+                </div>
+                <div class="col s3 mix category-l">
+                    <img class="materialboxed" width="100%" src="img/lu4zs.png" alt="lu4zs" id="lu4zs">
+                </div>
+                <div class="col s3 mix category-m">
+                    <img class="materialboxed" width="100%" src="img/md0cce.png" alt="md0cce" id="md0cce">
+                </div>
+                <div class="col s3 mix category-m">
+                    <img class="materialboxed" width="100%" src="img/mu0mxf.png" alt="mu0mxf" id="mu0mxf">
+                </div>
+                <div class="col s3 mix category-m">
+                    <img class="materialboxed" width="100%" src="img/mw0mut.png" alt="mw0mut" id="mw0mut">
+                </div>
+                <div class="col s3 mix category-o">
+                    <img class="materialboxed" width="100%" src="img/oj0a.png" alt="oj0a" id="oj0a">
+                </div>
+                <div class="col s3 mix category-p">
+                    <img class="materialboxed" width="100%" src="img/p51bh.png" alt="p51bh" id="p51bh">
+                </div>
+                <div class="col s3 mix category-p">
+                    <img class="materialboxed" width="100%" src="img/pq0s.png" alt="pq0s" id="pq0s">
+                </div>
+                <div class="col s3 mix category-p">
+                    <img class="materialboxed" width="100%" src="img/pq0t.png" alt="pq0t" id="pq0t">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ra0cdr.jpg" alt="ra0cdr" id="ra0cdr">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ri1anc.jfif" alt="ri1anc" id="ri1anc">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ri1anl.png" alt="ri1anl" id="ri1anl">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ri1anv.png" alt="ri1anv" id="ri1anv">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ri59ant.png" alt="ri59ant" id="ri59ant">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/rk3va.jpg" alt="rk3va" id="rk3va">
+                </div>
+                <div class="col s3 mix category-r">
+                    <img class="materialboxed" width="100%" src="img/ru6k.jpg" alt="ru6k" id="ru6k">
+                </div>
+                <div class="col s3 mix category-s">
+                    <img class="materialboxed" width="100%" src="img/s21dx.png" alt="s21dx" id="s21dx">
+                </div>
+                <div class="col s3 mix category-s">
+                    <img class="materialboxed" width="100%" src="img/sm0agd-kh1.png" alt="sm0agd-kh1" id="sm0agd-kh1">
+                </div>
+                <div class="col s3 mix category-s">
+                    <img class="materialboxed" width="100%" src="img/sv2rsg.png" alt="sv2rsg" id="sv2rsg">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t07cc.png" alt="t07cc" id="t07cc">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t2at.png" alt="t2at" id="t2at">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t30gc.png" alt="t30gc" id="t30gc">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t30xx.png" alt="t30xx" id="t30xx">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t33t.png" alt="t33t" id="t33t">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t5-it9hrk.png" alt="t5-it9hrk" id="t5-it9hrk">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t6aa.jpg" alt="t6aa" id="t6aa">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/t88on.png" alt="t88on" id="t88on">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/ta2se.png" alt="ta2se" id="ta2se">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tg9bbv.png" alt="tg9bbv" id="tg9bbv">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/ti9-ra9usu.png" alt="ti9-ra9usu" id="ti9-ra9usu">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tl7m.jpg" alt="tl7m" id="tl7m">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tl8t.png" alt="tl8t" id="tl8t">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/to11a.png" alt="to11a" id="to11a">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/to1e.png" alt="to1e" id="to1e">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/to5a.png" alt="to5a" id="to5a">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/to6ok.png" alt="to6ok" id="to6ok">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/to9w.PNG" alt="to9w" id="to9w">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx3x.png" alt="tx3x" id="tx3x">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx5c.png" alt="tx5c" id="tx5c">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx5d.png" alt="tx5d" id="tx5d">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx5p.png" alt="tx5p" id="tx5p">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx7g.png" alt="tx7g" id="tx7g">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/tx8dd.png" alt="tx8dd" id="tx8dd">
+                </div>
+                <div class="col s3 mix category-t">
+                    <img class="materialboxed" width="100%" src="img/ty1tt.png" alt="ty1tt" id="ty1tt">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ua0dam.jpg" alt="ua0dam" id="ua0dam">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ua0ic.png" alt="ua0ic" id="ua0ic">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ua0kcx.jpg" alt="ua0kcx" id="ua0kcx">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ua3ubt.jpg" alt="ua3ubt" id="ua3ubt">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/uk8ta.jpg" alt="uk8ta" id="uk8ta">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/un0nc.png" alt="un0nc" id="un0nc">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/un7zao.png" alt="un7zao" id="un7zao">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ur3hr.png" alt="ur3hr" id="ur3hr">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ur4ywc.jpg" alt="ur4ywc" id="ur4ywc">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ur5sd.png" alt="ur5sd" id="ur5sd">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/ux0dz.png" alt="ux0dz" id="ux0dz">
+                </div>
+                <div class="col s3 mix category-u">
+                    <img class="materialboxed" width="100%" src="img/uz4ayt.png" alt="uz4ayt" id="uz4ayt">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/v47ja.png" alt="v47ja" id="v47ja">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk0ir.png" alt="vk0ir" id="vk0ir">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk0mq.png" alt="vk0mq" id="vk0mq">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk9li.png" alt="vk9li" id="vk9li">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk9ma.png" alt="vk9ma" id="vk9ma">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk9w.png" alt="vk9w" id="vk9w">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vk9wa.jpg" alt="vk9wa" id="vk9wa">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp6d.png" alt="vp6d" id="vp6d">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp6eu.png" alt="vp6eu" id="vp6eu">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp6r.png" alt="vp6r" id="vp6r">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8-vp8dxu.png" alt="vp8-vp8dxu" id="vp8-vp8dxu">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp80rk.png" alt="vp80rk" id="vp80rk">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8lp.png" alt="vp8lp" id="vp8lp">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8pj.png" alt="vp8pj" id="vp8pj">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8sgi.png" alt="vp8sgi" id="vp8sgi">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8sti.png" alt="vp8sti" id="vp8sti">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vp8vpc.png" alt="vp8vpc" id="vp8vpc">
+                </div>
+                <div class="col s3 mix category-v">
+                    <img class="materialboxed" width="100%" src="img/vu4g.png" alt="vu4g" id="vu4g">
+                </div>
+                <div class="col s3 mix category-w">
+                    <img class="materialboxed" width="100%" src="img/wb0ics-kh7.jpg" alt="wb0ics-kh7" id="wb0ics-kh7">
+                </div>
+                <div class="col s3 mix category-w">
+                    <img class="materialboxed" width="100%" src="img/ww6rg-kh9.png" alt="ww6rg-kh9" id="ww6rg-kh9">
+                </div>
+                <div class="col s3 mix category-x">
+                    <img class="materialboxed" width="100%" src="img/xf4dx.png" alt="xf4dx" id="xf4dx">
+                </div>
+                <div class="col s3 mix category-x">
+                    <img class="materialboxed" width="100%" src="img/xt2aw.jpg" alt="xt2aw" id="xt2aw">
+                </div>
+                <div class="col s3 mix category-x">
+                    <img class="materialboxed" width="100%" src="img/xt2se.png" alt="xt2se" id="xt2se">
+                </div>
+                <div class="col s3 mix category-y">
+                    <img class="materialboxed" width="100%" src="img/y590iaru.png" alt="y590iaru" id="y590iaru">
+                </div>
+                <div class="col s3 mix category-y">
+                    <img class="materialboxed" width="100%" src="img/yn2cc.png" alt="yn2cc" id="yn2cc">
+                </div>
+                <div class="col s3 mix category-y">
+                    <img class="materialboxed" width="100%" src="img/yw0a.png" alt="yw0a" id="yw0a">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/z81d.png" alt="z81d" id="z81d">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zd7w.png" alt="zd7w" id="zd7w">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zd8sc.png" alt="zd8sc" id="zd8sc">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zd9zs.png" alt="zd9zs" id="zd9zs">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zk3a.png" alt="zk3a" id="zk3a">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zl7dx.png" alt="zl7dx" id="zl7dx">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zl8ri.png" alt="zl8ri" id="zl8ri">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zl9a.png" alt="zl9a" id="zl9a">
+                </div>
+                <div class="col s3 mix category-z">
+                    <img class="materialboxed" width="100%" src="img/zs8z.png" alt="zs8z" id="zs8z">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/mixitup.min.js"></script>
+
+    <script>
+        M.AutoInit();
+        var mixer = mixitup(".all-cards");
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems);
+        });
+
+        $(function () {
+            var ClassName = document.getElementsByClassName("materialboxed");
+            var cards = Array(ClassName.length);
+            for (var i = 0; i < ClassName.length; i++) {
+                var str = ClassName[i].id;
+                str = str.replaceAll("-", "/");
+                str = str.toUpperCase();
+                cards[i] = str;
+            }
+            $("#user_request").autocomplete({
+                source: cards
+            });
+        });
+
+        function Search() {
+            var name_card = document.getElementById("user_request").value;
+            document.getElementById("user_request").value = "";
+            name_card = name_card.replaceAll("/", "-");
+            name_card = name_card.toLowerCase();
+            var id_card = "#" + name_card;
+            if (document.getElementById(name_card) != null) {
+                var page = ".category-" + Array.from(name_card)[0];
+                mixer.filter(page);
+                setTimeout(function () {
+                    $('html, body').animate({
+                        scrollTop: $(id_card).offset().top
+                    }, 1000, function () {
+                        $(id_card).animate({
+                            opacity: 0.2
+                        }, 1000, function () {
+                            $(id_card).animate({
+                                opacity: 1
+                            }, 1000);
+                        });
+                    });
+                }, 1000)
+            } else {
+                alert("Фото с данным позывным не найдено.");
+            }
+        } 165
+
+        function Count() {
+            var count_all = document.getElementsByClassName("materialboxed");
+            var count_1 = document.getElementsByClassName("category-1");
+            var count_2 = document.getElementsByClassName("category-2");
+            var count_3 = document.getElementsByClassName("category-3");
+            var count_4 = document.getElementsByClassName("category-4");
+            var count_5 = document.getElementsByClassName("category-5");
+            var count_6 = document.getElementsByClassName("category-6");
+            var count_7 = document.getElementsByClassName("category-7");
+            var count_8 = document.getElementsByClassName("category-8");
+            var count_9 = document.getElementsByClassName("category-9");
+            var count_0 = document.getElementsByClassName("category-0");
+            var count_a = document.getElementsByClassName("category-a");
+            var count_b = document.getElementsByClassName("category-b");
+            var count_c = document.getElementsByClassName("category-c");
+            var count_d = document.getElementsByClassName("category-d");
+            var count_e = document.getElementsByClassName("category-e");
+            var count_f = document.getElementsByClassName("category-f");
+            var count_g = document.getElementsByClassName("category-g");
+            var count_h = document.getElementsByClassName("category-h");
+            var count_i = document.getElementsByClassName("category-i");
+            var count_j = document.getElementsByClassName("category-j");
+            var count_k = document.getElementsByClassName("category-k");
+            var count_l = document.getElementsByClassName("category-l");
+            var count_m = document.getElementsByClassName("category-m");
+            var count_n = document.getElementsByClassName("category-n");
+            var count_o = document.getElementsByClassName("category-o");
+            var count_p = document.getElementsByClassName("category-p");
+            var count_q = document.getElementsByClassName("category-q");
+            var count_r = document.getElementsByClassName("category-r");
+            var count_s = document.getElementsByClassName("category-s");
+            var count_t = document.getElementsByClassName("category-t");
+            var count_u = document.getElementsByClassName("category-u");
+            var count_v = document.getElementsByClassName("category-v");
+            var count_w = document.getElementsByClassName("category-w");
+            var count_x = document.getElementsByClassName("category-x");
+            var count_y = document.getElementsByClassName("category-y");
+            var count_z = document.getElementsByClassName("category-z");
+            alert(`Всего карточек: ${count_all.length}.\n1: ${count_1.length}.\n2: ${count_2.length}.\n3: ${count_3.length}.\n4: ${count_4.length}.\n5: ${count_5.length}.\n6: ${count_6.length}.\n7: ${count_7.length}.\n8: ${count_8.length}.\n9: ${count_9.length}.\n0: ${count_0.length}.\nA: ${count_a.length}.\nB: ${count_b.length}.\nC: ${count_c.length}.\nD: ${count_d.length}.\nE: ${count_e.length}.\nF: ${count_f.length}.\nG: ${count_g.length}.\nH: ${count_h.length}.\nI: ${count_i.length}.\nJ: ${count_j.length}.\nK: ${count_k.length}.\nL: ${count_l.length}.\nПродолжение в следующем сообщении...`);
+            alert(`M: ${count_m.length}.\nN: ${count_n.length}.\nO: ${count_o.length}.\nP: ${count_p.length}.\nQ: ${count_q.length}.\nR: ${count_r.length}.\nS: ${count_s.length}.\nT: ${count_t.length}.\nU: ${count_u.length}.\nV: ${count_v.length}.\nW: ${count_w.length}.\nX: ${count_x.length}.\nY: ${count_y.length}.\nZ: ${count_z.length}.`);
+        }
+    </script>
+</body>
+
+</html>
